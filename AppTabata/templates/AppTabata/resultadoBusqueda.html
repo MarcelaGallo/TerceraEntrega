@@ -1,0 +1,18 @@
+<p>Estamos buscando el: {{codigo}}</p>
+
+{% if producto %}
+
+<ul>
+{% for n in producto %}
+    <li> {{n.codigo}}</li>
+    <li> {{n.tipo}}</li>
+{% endfor %}
+
+
+</ul>
+{% else %}
+<p>No hay resultados que concuerden con el Código suministrado.</p>
+
+{% endif %}
+
+<p style="color: greenyellow;">{{respuesta}}</p>
