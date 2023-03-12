@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer Empleados</title>
+</head>
+<body>
+
+    {% for e in Empleados %}
+      
+        <li>{{e}}</li>
+        <button>
+            <a href="{% url 'EliminarEmpleado' e.nombre %}"> Eliminar</a>
+            <a href="{% url 'EditarEmpleado' e.nombre %}"> Editar</a>
+        </button>
+
+    {% endfor %}
+
+    <a href="empleado">Agregar otro Empleado</a>
+
+    
+</body>
+</html>
+

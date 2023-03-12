@@ -1,0 +1,36 @@
+{% extends "AppTabata/padre.html" %}
+
+{% load static %}
+
+{% block title %}
+Update Profile!
+{% endblock %}
+
+{% block logo %}
+{% endblock %}
+
+{% block content %}
+    <header class="py-5 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1> Formulario - Editar Perfil</h1>
+                <h1> Para {{usuario}}</h1>
+
+
+    <form action=" " method="POST">
+        {% csrf_token %}
+
+        <table>
+
+            {{miFormulario.as_table}}
+
+        </table>
+
+        <input type="submit", value="Actualizar">
+
+    </form>
+
+           </div>
+        </div>
+    </header>
+{% endblock %}

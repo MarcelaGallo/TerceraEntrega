@@ -1,0 +1,27 @@
+{% extends "AppTabata/padre.html" %}
+
+{% load static %}
+
+{% block title %}
+Register!
+{% endblock %}
+
+{% block logo %}
+{% endblock %}
+
+{% block content %}
+    <header class="py-5 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1>Registro</h1>
+                <p class="lead mb-0">Crear una Nueva Cuenta de Usuario</p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
+</div>
+</header>
+{% endblock %}
