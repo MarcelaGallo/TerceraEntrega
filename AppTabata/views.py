@@ -192,10 +192,6 @@ def editarPerfil(request):
     
     return render(request, "AppTabata/editarPerfil.html", {"miFormulario":miFormulario, "usuario":usuario})
 
-#@login_required
-#def inicio(request):
 
-    #avatares=Avatar.objects.filter(user=request.user.id)
-    #return render(request, "AppTabata/inicio.html", {"url":avatares[0].imagen.url})
-  
+###
        
