@@ -1,8 +1,17 @@
-# TerceraEntrega
+Entrega Final del Proyecto
+Curso de Python
+Comisión: 34665
+Alumna: Diana Marcea Gallo Fonseca
 
-Se crearon 3 modelos llamados:
+Contenido
 
-* Empleado: Datos del empleado
-* Proveedor: Datos de los proveedores de materia prima
-* Producto: Datos de los productos que se manejan en la empresa.
+Contar con un admin en route admin/ donde se puedan manejar los datos en la app.
 
+Contar con una página principal donde se pueda llegar a los 3 modelos de datos.
+
+Contar con páginas por cada modelo para:
+
+CRUD
+
+lOGIN
+Superusuario: marcelagf - password: 123456
