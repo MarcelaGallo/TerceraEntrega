@@ -202,6 +202,5 @@ def about(request):
     else:
         return render(request, "AppTabata/about.html")
     
-def blogempleado(request):
-    return HttpResponse("Blog Empleado")
+
        
