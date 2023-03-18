@@ -1,7 +1,7 @@
 Entrega Final del Proyecto
 Curso de Python
 Comisión: 34665
-Alumna: Diana Marcea Gallo Fonseca
+Alumna: Diana Marcela Gallo Fonseca
 
 Contenido
 
