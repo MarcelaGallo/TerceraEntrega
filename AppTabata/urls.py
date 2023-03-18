@@ -22,5 +22,4 @@ urlpatterns = [
     path('editarPerfil', views.editarPerfil, name='EditarPerfil'),
     path('logout', LogoutView.as_view(template_name='AppTabata/logout.html'), name='Logout'),
     path('about', views.about, name='About'),
-    path('blogempleado', views.blogempleado, name="Blogempleado"),
 ]
