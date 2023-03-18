@@ -66,9 +66,9 @@ def busquedaProducto(request):
     return render(request, "AppTabata/busquedaproducto.html")
 
 def buscar(request):
-    if request.GET["codigo"]:
+    if request.GET[codigo]:
         codigo = request.GET['codigo']
-        producto = Producto.objects.filter(codigo__icontains=codigo)
+        producto = Producto.objects.filter(codigo__contains=codigo)
         return render(request, "AppTabata/resultadoBusqueda.html", {"codigo":codigo, "producto":producto})
     else:
         respuesta = "No hay datos" 
@@ -165,7 +165,6 @@ def register(request):
             return render(request, "AppTabata/inicio.html", {"mensaje": "Usuario Creado Exitosamente: "})
     
     else:
-        #form = UserCreationForm()
         form = UserRegisterForm()
     
     return render(request, "AppTabata/registro.html", {"form":form})
@@ -178,20 +177,31 @@ def editarPerfil(request):
         
         if miFormulario.is_valid():
             
-            informacion = UserEditorForm.cleaned_data
+            informacion = miFormulario.cleaned_data
             
             usuario.email = informacion['email']
-            usuario.password1 = informacion['first_name']
-            usuario.password2 = informacion['last_name']
+            usuario.firstname = informacion['first_name']
+            usuario.lastname = informacion['last_name']
             usuario.save()
             
-            return render(request,"AppTabata/inicio.html")
+            return render(request,"AppTabata/inicio.html", {'message': "El Usuario ha sido Actualizado."})
     else:
 
-        miFormulario = UserEditorForm(initial={'email':usuario.email })
+        inicial_data={'email':usuario.email, 'first_name':usuario.first_name, 'last_name':usuario.last_name}
+
+        miFormulario = UserEditorForm(initial=inicial_data)
     
     return render(request, "AppTabata/editarPerfil.html", {"miFormulario":miFormulario, "usuario":usuario})
 
 
-###
+
+def about(request):
+    funcionario = Empleado.objects.all()
+    if funcionario:
+        return render(request, "AppTabata/about.html", {'Funcionario':funcionario})
+    else:
+        return render(request, "AppTabata/about.html")
+    
+def blogempleado(request):
+    return HttpResponse("Blog Empleado")
        

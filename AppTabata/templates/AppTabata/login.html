@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block title %}
-Ingreso!
 {% endblock %}
 
 {% block logo %}
@@ -13,18 +12,18 @@ Ingreso!
     <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
             <div class="text-center my-5">
-                <h1>Ingreso!</h1>
-                <p1 class="lead mb-0">Ingrese las Credenciales de Acceso</p1>
-    <form action="" method="POST">{% csrf_token %}
+                <h1>Ingreso al Sistema</h1>
+                <p class="lead mb-0">Ingrese las Credenciales de Acceso</p>
+                <form action="" method="POST">{% csrf_token %}
 
-        <table>
-            {{ form.as_table }}
-        </table>
+                    <table>
+                        {{ form.as_table }}
+                    </table>
   
                     <button type="submit">Ingresar</button>
                 </form>
                 <hr>
-                <a href="{% url 'Register' %}">Crear una nueva cuenta</a>
+                <a href="{% url 'Register' %}">Crear Nueva Cuenta</a>
             </div>
         </div>
     </header>

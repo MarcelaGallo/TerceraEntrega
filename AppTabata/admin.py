@@ -8,5 +8,3 @@ admin.site.register(Empleado)
 admin.site.register(Proveedor)
 
 admin.site.register(Producto)
-
-admin.site.register(Avatar)

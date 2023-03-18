@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto Detalle</title>
-</head>
-<body>
+{% extends "AppTabata/padre.html" %}
+   
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
     <p>Codigo del Producto: <i>{{producto.codigo}}</i></p>
     <p>Tipo: <i>{{producto.tipo}}</i></p>
     <p>Referencia: <i>{{producto.tipo}}</i></p>
@@ -14,5 +12,4 @@
     <p>
         <a href="{% url 'List' %}">Regresar</a>
     </p>
-</body>
-</html>
+{% endblock %}
