@@ -66,7 +66,7 @@ def busquedaProducto(request):
     return render(request, "AppTabata/busquedaproducto.html")
 
 def buscar(request):
-    if request.GET[codigo]:
+    if request.GET['codigo']:
         codigo = request.GET['codigo']
         producto = Producto.objects.filter(codigo__contains=codigo)
         return render(request, "AppTabata/resultadoBusqueda.html", {"codigo":codigo, "producto":producto})

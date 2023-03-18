@@ -1,4 +1,18 @@
-<p>Estamos buscando el: {{codigo}}</p>
+{% extends "AppTabata/padre.html" %}
+
+{% load static %}
+
+{% block title %}
+Update Profile!
+{% endblock %}
+
+{% block logo %}
+{% endblock %}
+
+{% block content %}
+
+
+<p>Resultado para el Código: {{codigo}}</p>
 
 {% if producto %}
 
@@ -6,6 +20,8 @@
 {% for n in producto %}
     <li> {{n.codigo}}</li>
     <li> {{n.tipo}}</li>
+    <li> {{n.referencia}}</li>
+    <li> {{n.precio}}</li>
 {% endfor %}
 
 
@@ -15,4 +31,4 @@
 
 {% endif %}
 
-<p style="color: greenyellow;">{{respuesta}}</p>
+{% endblock %}
